@@ -1,1 +1,1 @@
-# CI-CD-Exercise-Back-end-Test-Automation-
+# CI-CD-Exercise-Back-end-Test-Automation-StudentRegistryApp
