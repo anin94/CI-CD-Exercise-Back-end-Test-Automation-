@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -15,17 +14,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh '''
-                    set -e
-
-                    npm start -- 8888 > app.log 2>&1 &
-                    APP_PID=$!
-
-                    trap 'kill $APP_PID 2>/dev/null || true' EXIT
-
-                    sleep 3
-                    npm test
-                '''
+                sh 'npm test'
             }
         }
     }
